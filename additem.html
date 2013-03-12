@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+    <!--
+    web app part 1
+  	Matt Nowakowski
+  	Visual frameworks
+    1303
+   -->
+
+
+<html lang="en">
+	<head>
+		<title>My Load outs</title>
+		<meta type="charset" content = "utf-8" />
+		<meta type="robots" content="index,follow" />
+		<meta type="viewport" content="user-scalable=no, width=device-width" />
+		<meta type="description" content="Manage your Loadouts" />
+		<meta type="keywords" content = "Load outs, add Load out, Matt Nowakowski, vfw" />
+		<link rel="stylesheet" href="css/styles.css" type="text/css" />
+		
+	</head>
+	<body>
+		<header><h1><a href="index.html">My Load outs</a></h2></header>
+		<article><p>Manage your Load outs.</p></article>	
+		<article>
+			<section>
+				<nav>
+					<ul id="numlist">
+						<li><a href="additem.html" id="addNew" style="display:none;">Add Load out</a></li>
+						<li><a href="#" id="displayLink">Show All Load outs</a></li> 
+						<li><a href="#" id="clear"> Clear Stored Load outs</a></li>
+					</ul>
+				</nav>
+			</section>
+				<form action="additem.html" method="post" id="loadoutForm">
+					<fieldset id="loadoutFieldSet">
+						<legend>Load out Info</legend>
+							<ul id="loadout">
+								<li id="select"><label for="mtype">Weapon Type:</label><br /></li>
+								<li id="mname"><label for="mname">Load out Name: </label> <input type="text" id="mname" onfocus="styleWeapon();" /></li>
+								<li id="mdate"><label for="mdate">Load out Date: </label> <input type="date" id="mdate" placeholder="day/month/year" onfocus="styleField();" /></li>
+								<li id="mrating"><label for="mrating">Load out Rating: </label>1<input type="range" min="1" max="10" name="rating" id="mrating" onfocus="styleField();"/>10</li>
+								<li id="mtopics"><label for="mtopic">Class Selection:</label>  
+									<input type="radio" value="Assault" id="Assault" name="mtopics" /><label for="Assault">Assault</label>
+									<input type="radio" value="Sniper" id="Sniper" name="mtopics" /><label for="Sniper">Sniper</label>
+									<input type="radio" value="Support" id="Support" name="mtopics" /><label for="Support">Support</label>
+									</li>
+								<li id="mtags"><label for="mtags">Load out Tags:</label> <input type="text" id="mtags" /></li>
+								<li id="mcomments"><label for="mcomments">Load out Comments:</label> <textarea id="mcomments" /></textarea></li>
+								<input type="submit" value="Save Load out" id="submit" /> <br />
+							</ul>
+					</fieldset>
+				</form>
+		</article>
+		<footer></footer>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
